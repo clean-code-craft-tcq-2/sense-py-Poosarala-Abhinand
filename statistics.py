@@ -15,4 +15,18 @@ def calculateStats(numbers):
   return computedStats
 
 class EmailAlert:
-  
+  def __init__(self):
+    self.emailSent = False
+        
+class LEDAlert:
+  def __init__(self):
+    self.ledGlows = False
+        
+class StatsAlerter:
+  def __init__(self, maxThreshold, alert):
+    self.maxThreshold = maxThreshold
+    self.alert = alert
+  def checkAndAlert(self, values):
+    print(values)
+      
+    
