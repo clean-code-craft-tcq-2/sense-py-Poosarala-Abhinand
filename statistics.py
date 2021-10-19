@@ -21,9 +21,10 @@ class StatsAlerter:
 	def __init__(self, maxThreshold, alert):
 		self.maxThreshold = maxThreshold
 		self.alert = alert
+		
 	def checkAndAlert(self, values):
-		for i in values:
-			if i >= self.maxThreshold:
-				self.alert[0].emailSent = True
-				self.alert[1].ledGlows = True
-			break
+		calculatedstats = calculateStats(values)
+		#print(calculatedstats)
+		if calculatedstats["max"] > self.maxThreshold:
+			self.alert[0].emailSent = True
+			self.alert[1].ledGlows = True
