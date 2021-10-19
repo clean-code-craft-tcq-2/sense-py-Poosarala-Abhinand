@@ -4,7 +4,7 @@ def calculateStats(numbers):
   # return computedStats here.
   # check numbers for math.isnan
   computedStats = {}
-  if math.isnan(numbers):
+  if numbers  == []:
     computedStats["min"] = float('nan')
     computedStats["max"] = float('nan')
     computedStats["avg"] = float('nan')
