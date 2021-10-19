@@ -9,9 +9,9 @@ def calculateStats(numbers):
     computedStats["max"] = float('nan')
     computedStats["avg"] = float('nan')
   else:
-    computedStats["min"] = math.min(numbers)
-    computedStats["max"] = math.max(numbers)
-    computedStats["avg"] = math.sum(numbers)/math.len(numbers)
+    computedStats["min"] = min(numbers)
+    computedStats["max"] = max(numbers)
+    computedStats["avg"] = sum(numbers)/len(numbers)
   return computedStats
 
 class EmailAlert:
